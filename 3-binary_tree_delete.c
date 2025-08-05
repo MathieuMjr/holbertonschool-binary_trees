@@ -10,32 +10,10 @@
  */
 void binary_tree_delete(binary_tree_t *tree)
 {
-	binary_tree_t *reading_head;
-	binary_tree_t *temp;
-
 	if (tree == NULL)
 		return;
-	
-	reading_head = tree;
 
-	while((reading_head->left != NULL || reading_head->right != NULL))
-	{
-		while(reading_head->left != NULL || reading_head->right != NULL)
-		{
-			if(reading_head->left != NULL)
-				reading_head = reading_head->left;
-			else
-				reading_head = reading_head->right;
-		}
-		if (reading_head->parent == NULL)
-			break;
-		temp = reading_head;
-		reading_head = reading_head->parent;
-		if (reading_head->left == temp)
-			reading_head->left = NULL;
-		if (reading_head->right == temp)
-			reading_head->right = NULL;
-		free(temp);
-	}
+	binary_tree_delete(tree->left);
+	binary_tree_delete(tree->right);
 	free(tree);
 }
