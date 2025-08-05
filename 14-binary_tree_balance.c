@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_balance_bf - gives the height of
+ * binary_tree_height_bf - gives the height of
  * a tree
  * @tree: adress of the root of a binary
  * tree
