@@ -1,12 +1,11 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_insert_right - insert a node
- * as a right-child of a parent
- * @parent: adress of the parent node
- * @value: value of the node
+ * binary_tree_delete - free a binary tree
+ * @tree: adress of the root of a binary
+ * tree
  *
- * Return: adresse of the new node
+ * Return:
  */
 void binary_tree_delete(binary_tree_t *tree)
 {
